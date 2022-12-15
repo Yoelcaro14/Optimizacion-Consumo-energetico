@@ -183,7 +183,7 @@ def main() :
             st.write(" --- ")
      #################################################        DESCARGA        ##############################################
 
-            st.markdown('''**<th align="left"> DESCARGAR DATOS :</th>**''', unsafe_allow_html=True)
+            st.markdown('''**<th align="left"> DESCARGAR REGISTRO :</th>**''', unsafe_allow_html=True)
             
             def convert_df(df1,df2):
 
