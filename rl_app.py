@@ -29,10 +29,10 @@ def main() :
 
     selected = option_menu (
         menu_title = None,
-        options=['About','Visual', 'Data'],
+        options=['Registro','Gráfico','Datos'],
         icons=['bookmark-check-fill','bar-chart-fill','cloud-download-fill'],
         orientation='horizontal',
-        styles={"container": {"padding": "0!important", "background-color": "black"},
+        styles={"container": {"padding": "0!important", "background-color": "dark"},
                 "icon": {"color": "yellow", "font-size": "25px"}, 
                 "nav-link": {"font-size": "20px", "text-align": "center", "margin":"7px", "--hover-color": "orange"},
                 "nav-link-selected": { "margin":"7px","background-color": "black", "color" : "orange"}}
