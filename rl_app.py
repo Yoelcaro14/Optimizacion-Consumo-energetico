@@ -173,10 +173,10 @@ def main() :
                     # st.dataframe(df_indi_temporal[['ITEM','LECTURA','X PAGAR']].head(3),height=145,width=600)
                     # st.write("Consumo Total : ",f'S/. {total:,.2f}')
 
-                col1, col2, col3 = st.columns(3)
+                col1, col2 = st.columns(2)
                 col1.metric("**ANDY**", f'S/.{andy_paga:,.2f}' , f'{andy_var_pago:,.2f} Soles', help='**ROJO** *significa que se esta pagando más y* **VERDE** *que se esta pagando menos (respecto al mes anterior)*',delta_color="inverse")
                 col2.metric("**WILMER**", f'S/.{wilmer_paga:,.2f}', f'{wilmer_var_pago:,.2f} Soles', help='**ROJO** *significa que se esta pagando más y* **VERDE** *que se esta pagando menos (respecto al mes anterior)*',delta_color="inverse")
-                col3.metric("**NOEMI**", f'S/.{noemi_paga:,.2f}', f'{noemi_var_pago:,.2f} Soles', help='**ROJO** *significa que se esta pagando más y* **VERDE** *que se esta pagando menos (respecto al mes anterior)*',delta_color="inverse")
+#                 col3.metric("**NOEMI**", f'S/.{noemi_paga:,.2f}', f'{noemi_var_pago:,.2f} Soles', help='**ROJO** *significa que se esta pagando más y* **VERDE** *que se esta pagando menos (respecto al mes anterior)*',delta_color="inverse")
 
 
 
