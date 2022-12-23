@@ -169,7 +169,7 @@ def main() :
 
                 with right_column:
                     st.markdown('''**<p align="center">A PAGAR POR PERSONA</p>**''', unsafe_allow_html=True)
-                    st.metric('CONSUMO DEL MES DE',total,new_total,delta_color="inverse")
+                    st.metric('CONSUMO DEL MES',total,new_total,delta_color="inverse")
                     # st.dataframe(df_indi_temporal[['ITEM','LECTURA','X PAGAR']].head(3),height=145,width=600)
                     # st.write("Consumo Total : ",f'S/. {total:,.2f}')
                     
