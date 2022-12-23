@@ -172,6 +172,18 @@ def main() :
                     st.metric('CONSUMO DEL MES DE',total,new_total,delta_color="inverse")
                     # st.dataframe(df_indi_temporal[['ITEM','LECTURA','X PAGAR']].head(3),height=145,width=600)
                     # st.write("Consumo Total : ",f'S/. {total:,.2f}')
+                    
+                column1, column2, column3 = st.columns([1,1,1],gap="small")            
+                with st.container():
+                    with column1:        
+                        st.metric("**ANDY**", f'S/.{andy_paga:,.2f}' , f'{andy_var_pago:,.2f} Soles', help='**ROJO** *significa que se esta pagando más y* **VERDE** *que se esta pagando menos (respecto al mes anterior)*',delta_color="inverse")
+
+                    with column2: 
+                        st.metric("**ANDY**", f'S/.{andy_paga:,.2f}' , f'{andy_var_pago:,.2f} Soles', help='**ROJO** *significa que se esta pagando más y* **VERDE** *que se esta pagando menos (respecto al mes anterior)*',delta_color="inverse")
+
+                    with column3: 
+                        st.metric("**ANDY**", f'S/.{andy_paga:,.2f}' , f'{andy_var_pago:,.2f} Soles', help='**ROJO** *significa que se esta pagando más y* **VERDE** *que se esta pagando menos (respecto al mes anterior)*',delta_color="inverse")
+
 
                 col1, col2,col3 = st.columns(3)
                 col1.metric("**ANDY**", f'S/.{andy_paga:,.2f}' , f'{andy_var_pago:,.2f} Soles', help='**ROJO** *significa que se esta pagando más y* **VERDE** *que se esta pagando menos (respecto al mes anterior)*',delta_color="inverse")
