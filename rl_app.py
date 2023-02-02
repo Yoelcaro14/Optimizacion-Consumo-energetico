@@ -85,17 +85,17 @@ def main() :
                 with column2: 
                     int_conv= st.number_input('INTERES COMPENSATORIO/CONV. : ')
                     alumb_pub= st.number_input('ALUMBRADO PUBLICO : ')
-                    sub_total= float(repos_man + carg_fij + carg_ener + int_conv + alumb_pub )
-                    descuento= st.number_input('DL 25844 U OTRO DSCT. :')
+                    sub_total= float(repos_man + carg_fij + carg_ener + int_conv + alumb_pub)
                     igv= float(sub_total*0.18)
                     total_mes_actual= float(sub_total + igv)
+                    aport_ley= st.number_input('APORTE DE LEY : ')                   
 
                 with column3: 
-                    aport_ley= st.number_input('APORTE DE LEY : ')
+                    descuento= st.number_input('DL 25844 U OTRO DSCT. :')                                        
                     cuot_conv= st.number_input('RECARGO MORA/CUO.CONV. :')
                     redondeo= st.number_input('REDONDEO ACTUAL :')
                     redondeo2= float(df_format.loc[0,'REDONDEO']*(-1))
-                    total= round( total_mes_actual + aport_ley + cuot_conv + redondeo + redondeo2,2)
+                    total= round( total_mes_actual + aport_ley + descuento + cuot_conv + redondeo + redondeo2,2)
 
                     cuot_energ_adic= round( repos_man + carg_fij + int_conv + alumb_pub + igv + aport_ley + cuot_conv + redondeo + redondeo2,2)
                     cea_ind= round(cuot_energ_adic/3,2)
