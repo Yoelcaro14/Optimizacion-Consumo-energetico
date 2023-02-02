@@ -86,6 +86,7 @@ def main() :
                     int_conv= st.number_input('INTERES COMPENSATORIO/CONV. : ')
                     alumb_pub= st.number_input('ALUMBRADO PUBLICO : ')
                     sub_total= float(repos_man + carg_fij + carg_ener + int_conv + alumb_pub )
+                    descuento= st.number_input('DL 25844 U OTRO DSCT. :')
                     igv= float(sub_total*0.18)
                     total_mes_actual= float(sub_total + igv)
 
@@ -107,11 +108,11 @@ def main() :
                     # ''' TABLA TEMPORAL DEL FORMATO RECIBO '''
 
                     df_format_temporal = pd.DataFrame(np.array([[fecha,kwh,lectura,var_lect,repos_man,carg_fij,carg_ener,int_conv,alumb_pub,sub_total,
-                                                                igv,total_mes_actual,aport_ley,cuot_conv,redondeo,redondeo2,total,cuot_energ_adic,
+                                                                igv,total_mes_actual,aport_ley,descuento,cuot_conv,redondeo,redondeo2,total,cuot_energ_adic,
                                                                 cea_ind,cor,rep,camb_prec,refac]]),
                                                                 columns=['MES', 'KWh S/.', 'LECTURA', 'VAR. LECTURA', 'REPOSICIÓN Y MANTENIM.',
                                                                         'CARGO FIJO', 'CARGO ENERGIA', 'INTERES CONVENIO', 'ALUMBRADO PUBLICO',
-                                                                        'SUBTOTAL', 'IGV', 'TOTAL MES ACTUAL', 'APORTE DE LEY:',
+                                                                        'SUBTOTAL', 'IGV', 'TOTAL MES ACTUAL', 'APORTE DE LEY:','OTROS',
                                                                         'cuota de convenio', 'REDONDEO', 'REDONDEO 2', 'TOTAL A PAGAR :',
                                                                         'CONSUMO DE ENERGIA ADICIONAL', 'C.E.A. INDIVID.',
                                                                         'COR-Fus. o interr (s/r)', 'REP-Fus. o interrup(s/r)',
