@@ -198,7 +198,7 @@ def main() :
                 worksheet2.set_column('A:A', None, format1)  
                 writer.save()
                 processed_data = output.getvalue()
-                writer.close()
+#                 writer.close()
                 return processed_data
 
             xlsx = convert_df(df_format_exportar,df_indi_exportar)
